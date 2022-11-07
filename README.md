@@ -1,6 +1,6 @@
 # README
 
-##Tecnologias usadas:
+## Tecnologias usadas:
 
 Front: Boostrap 
 
