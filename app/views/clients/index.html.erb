@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Clientes</h1>
+<a href="<%= new_client_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+        <i class="fas fa-flag"></i>
+  </span>
+  <span class="text">Cadastrar Cliente</span>
+</a>
+
+<br>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Data de nascimento</th>
+        <th></th>
+         <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @clients.each do |client| %>
+    <tr>
+        <td><%= client.name %></td>
+        <td><%= client.date %></td>
+        <td><%= link_to 'Editar', edit_client_path(client) %></td>
+        <td><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td> 
+    </tr>
+    <% end %>
+  </tbody>
+</table>
